@@ -37,6 +37,7 @@ public class RequestDeliveryActivity extends AppCompatActivity {
         setContentView(R.layout.activity_request_delivery);
 
 
+
         recyclerView = findViewById(R.id.rv_pickup_list);
 
         TextView toolbar = findViewById(R.id.tv_toolbar_title);
