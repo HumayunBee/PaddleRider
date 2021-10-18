@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.LoginActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="250dp"
+            android:layout_height="150dp"
+            android:src="@drawable/paddlecourier"
+            android:layout_marginTop="@dimen/twentyFive"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/twenty"
+            android:elevation="@dimen/ten"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:cardCornerRadius="@dimen/ten"
+            android:padding="@dimen/ten"
+            app:layout_constraintTop_toBottomOf="@+id/iv_logo">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="@dimen/twenty">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_h1"
+                    android:text="@string/login"
+                    style="@style/PlayFairBold"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center_horizontal"/>
+
+                <EditText
+                    android:id="@+id/et_user_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/email"
+                    android:textSize="@dimen/sixteen"
+                    android:textColor="@color/black"
+                    android:padding="@dimen/eight"
+                    android:drawablePadding="@dimen/ten"
+                    android:background="@drawable/bg_input_field"
+                    android:inputType="textEmailAddress"
+                    android:layout_marginStart="@dimen/twenty"
+                    android:layout_marginEnd="@dimen/twenty"
+                    android:layout_marginTop="@dimen/twenty"
+                    style="@style/RobotoRegular"
+                    android:drawableStart="@drawable/ic_email_25_grey"
+                    android:gravity="center_vertical"
+                    tools:ignore="RtlCompat" />
+
+                <EditText
+                    android:id="@+id/et_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/password"
+                    android:textSize="@dimen/sixteen"
+                    android:textColor="@color/black"
+                    android:padding="@dimen/eight"
+                    android:inputType="textPassword"
+                    android:background="@drawable/bg_input_field"
+                    android:layout_marginStart="@dimen/twenty"
+                    android:layout_marginEnd="@dimen/twenty"
+                    style="@style/RobotoRegular"
+                    android:layout_marginTop="@dimen/twenty"
+                    android:drawablePadding="@dimen/ten"
+                    android:drawableStart="@drawable/ic_password_25_grey"
+                    android:gravity="center_vertical"
+                    tools:ignore="RtlCompat" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/twentyFive"
+                    android:layout_marginStart="@dimen/twentyFive"
+                    android:layout_marginTop="@dimen/thirty"
+                    android:layout_marginBottom="@dimen/twenty"
+                    style="@style/PlayFairBold"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:text="@string/login"
+                    android:textColor="@color/white"
+                    android:background="@drawable/bg_button"
+                    android:textSize="@dimen/sixteen"/>
+
+<!--                <androidx.appcompat.widget.AppCompatTextView-->
+<!--                    android:id="@+id/tv_forgot_password"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:textSize="@dimen/text_size_h4"-->
+<!--                    android:text="@string/forgot_password"-->
+<!--                    style="@style/RobotoRegular"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:padding="@dimen/five"-->
+<!--                    android:layout_gravity="center_horizontal"/>-->
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

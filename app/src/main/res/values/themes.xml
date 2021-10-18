@@ -1,0 +1,42 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.BeaconRider" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+
+    <style name="RobotoRegular" parent="android:Widget.Holo.Light.TextView">
+        <item name="fontPath">fonts/Roboto-Regular.ttf</item>
+    </style>
+
+    <style name="RobotoMedium" parent="android:Widget.Holo.Light.TextView">
+        <item name="fontPath">fonts/Roboto-Medium.ttf</item>
+    </style>
+
+    <style name="RobotoBold" parent="android:Widget.Holo.Light.TextView">
+        <item name="fontPath">fonts/Roboto-Bold.ttf</item>
+    </style>
+
+    <style name="RobotoLight" parent="android:Widget.Holo.Light.TextView">
+        <item name="fontPath">fonts/Roboto-Light.ttf</item>
+    </style>
+
+    <style name="PlayFairBold" parent="android:Widget.Holo.Light.TextView">
+        <item name="fontPath">fonts/PlayfairDisplay-Bold.ttf</item>
+    </style>
+
+    <style name="ToolbarStyle">
+        <item name="android:textColorSecondary">@color/teal_200</item>
+        <item name="colorControlNormal">@color/teal_200</item>
+    </style>
+</resources>

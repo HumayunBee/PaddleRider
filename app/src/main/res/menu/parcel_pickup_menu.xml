@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/m_request_accept"
+        android:title="@string/request_accept"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/m_request_reject"
+        android:title="@string/request_reject"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/m_request_complete"
+        android:title="@string/request_complete"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/m_request_reschedule"
+        android:title="@string/request_reschedule"
+        app:showAsAction="never"/>
+
+</menu>

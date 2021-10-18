@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/ten"
+    android:orientation="vertical"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="@dimen/ten">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/fifteen">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:padding="@dimen/five"
+                app:srcCompat="@drawable/ic_clear"
+                tools:ignore="ContentDescription" />
+
+            <LinearLayout
+                android:id="@+id/ln_delivery_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ten"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/RobotoMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/ten"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/five"
+                    android:paddingEnd="@dimen/five"
+                    android:singleLine="true"
+                    android:text="@string/delivery_type"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sixteen" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/sp_user_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/five"
+                    android:background="@drawable/bg_input_field"
+                    android:minHeight="@dimen/thirty_five" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ln_confirm_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ten"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/RobotoMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/ten"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/five"
+                    android:paddingEnd="@dimen/five"
+                    android:singleLine="true"
+                    android:text="@string/confirm_amount"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sixteen" />
+
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_amount"
+                    style="@style/RobotoMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_input_field"
+                    android:drawablePadding="@dimen/ten"
+                    android:gravity="center_vertical"
+                    android:hint="@string/amount"
+                    android:maxLength="8"
+                    android:padding="@dimen/eight"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sixteen"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ln_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ten"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/RobotoMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/ten"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/five"
+                    android:paddingEnd="@dimen/five"
+                    android:singleLine="true"
+                    android:text="@string/code"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sixteen" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/et_code"
+                        style="@style/RobotoMedium"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_input_field"
+                        android:drawablePadding="@dimen/ten"
+                        android:gravity="center_vertical"
+                        android:hint="@string/code"
+                        android:maxLength="8"
+                        android:padding="@dimen/eight"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sixteen" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/send_otp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/bg_button"
+                        android:text="Send Otp"
+                        android:textColor="#fff" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ln_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ten"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/RobotoMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/ten"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/five"
+                    android:paddingEnd="@dimen/five"
+                    android:singleLine="true"
+                    android:text="@string/select_date"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sixteen" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_date"
+                    style="@style/RobotoMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_input_field"
+                    android:drawablePadding="@dimen/ten"
+                    android:gravity="center_vertical"
+                    android:hint="@string/date_format"
+                    android:padding="@dimen/eight"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sixteen" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ln_note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ten"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/RobotoMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/ten"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/five"
+                    android:paddingEnd="@dimen/five"
+                    android:singleLine="true"
+                    android:text="@string/note"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sixteen" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_note"
+                    style="@style/RobotoMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_input_field"
+                    android:drawablePadding="@dimen/ten"
+                    android:gravity="start"
+                    android:hint="@string/note"
+                    android:minHeight="60dp"
+                    android:padding="@dimen/eight"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sixteen" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_confirm"
+                style="@style/RobotoMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/thirty"
+                android:background="@drawable/bg_button"
+                android:gravity="center"
+                android:text="@string/confirm"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+                android:textColor="@color/white"
+                android:textSize="@dimen/fifteen" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.cardview.widget.CardView>

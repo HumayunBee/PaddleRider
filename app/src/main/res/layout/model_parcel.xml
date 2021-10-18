@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardCornerRadius="@dimen/five"
+    android:elevation="@dimen/five"
+    android:layout_marginTop="@dimen/divider_height"
+    android:layout_marginBottom="@dimen/divider_height"
+    android:layout_marginStart="@dimen/five"
+    android:layout_marginEnd="@dimen/five">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/five"
+        android:gravity="center_vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_invoice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/RobotoMedium"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/text_size_h5"
+            tools:text="Inv-599714"
+            android:padding="@dimen/five"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/five"
+            android:src="@drawable/ic_menu"
+            android:layout_alignParentEnd="true"/>
+
+        <LinearLayout
+            android:id="@+id/ln_customer_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/tv_invoice">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_customer_name"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                style="@style/RobotoRegular"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_h5"
+                tools:text="Atik Faysal"
+                android:padding="@dimen/five"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_phone"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                style="@style/RobotoMedium"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_h5"
+                tools:text="01759972314"
+                android:padding="@dimen/five"/>
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_address"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/ln_customer_info"
+            android:layout_height="wrap_content"
+            style="@style/RobotoRegular"
+            android:textColor="@color/colorA"
+            android:paddingStart="@dimen/five"
+            android:paddingEnd="@dimen/five"
+            android:textSize="@dimen/twelve"
+            tools:text="Dhaka, Dhanmondi, Shukrabad"/>
+
+        <LinearLayout
+            android:id="@+id/parcel_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/five"
+            android:orientation="vertical"
+            android:layout_below="@+id/tv_address">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/RobotoRegular"
+                android:textColor="@color/black"
+                app:drawableStartCompat="@drawable/ic_point_black"
+                android:drawablePadding="@dimen/divider_height"
+                android:paddingStart="@dimen/divider_height"
+                android:paddingEnd="@dimen/five"
+                android:textSize="@dimen/text_size_h5"
+                tools:text="Collection Amount 523/="/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_merchant_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/RobotoRegular"
+                android:textColor="@color/black"
+                app:drawableStartCompat="@drawable/ic_point_red"
+                android:layout_marginTop="@dimen/divider_height"
+                android:drawablePadding="@dimen/divider_height"
+                android:paddingStart="@dimen/divider_height"
+                android:paddingEnd="@dimen/divider_height"
+                android:textSize="@dimen/text_size_h5"
+                tools:text="Merchant name: Atik Faysal"/>
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/RobotoMedium"
+            android:layout_below="@+id/parcel_info"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/twelve"
+            android:layout_alignParentEnd="true"
+            tools:text="Pickup Request"
+            android:gravity="end|center_vertical"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

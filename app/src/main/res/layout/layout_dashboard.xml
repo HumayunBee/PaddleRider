@@ -1,0 +1,1781 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorC"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/layout_toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_root"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorC">
+
+            <RelativeLayout
+                android:id="@+id/rl_user_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/five"
+                android:background="@color/white"
+                android:padding="@dimen/five"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_user_image"
+                    android:layout_width="50sp"
+                    android:layout_height="50sp"
+                    android:src="@drawable/img_avatar" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/ten"
+                    android:layout_toRightOf="@+id/iv_user_image"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_user_name"
+                        style="@style/RobotoMedium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/merchant_name"
+                        android:padding="@dimen/five"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_h5" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_phone"
+                        style="@style/RobotoRegular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/phone"
+                        android:padding="@dimen/five"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_h6" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/old"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/rl_user_info">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:layout_marginTop="25dp"
+                                android:background="@drawable/box"
+                                android:orientation="vertical"
+                                android:padding="5dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="15dp"
+                                    android:lines="1"
+                                    android:text="Today Pickup Request"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/today_pickup_parcel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="5dp"
+                                    android:drawablePadding="5sp"
+                                    android:gravity="center"
+                                    android:text="-"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                        <ImageView
+                            android:layout_width="42dp"
+                            android:layout_height="42dp"
+                            android:layout_marginLeft="15dp"
+                            android:src="@drawable/today_pickup_request" />
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:layout_marginTop="25dp"
+                                android:background="@drawable/box"
+                                android:orientation="vertical"
+                                android:padding="5dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="15dp"
+                                    android:lines="1"
+                                    android:text="Today Pickup Done"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+
+                                <TextView
+                                    android:id="@+id/today_pickup_done"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="5dp"
+                                    android:drawablePadding="5sp"
+                                    android:gravity="center"
+                                    android:text="-"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="42dp"
+                            android:layout_height="42dp"
+                            android:layout_marginLeft="15dp"
+                            android:src="@drawable/today_pickup_done" />
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    android:weightSum="2">
+
+
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:layout_marginTop="25dp"
+                                android:background="@drawable/box"
+                                android:orientation="vertical"
+                                android:padding="5dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="15dp"
+                                    android:lines="1"
+                                    android:text="Today Delivery Request "
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+
+                                <TextView
+                                    android:id="@+id/today_delivery_parcel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="5dp"
+                                    android:drawablePadding="5sp"
+                                    android:gravity="center"
+                                    android:text="-"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="42dp"
+                            android:layout_height="42dp"
+                            android:layout_marginLeft="15dp"
+                            android:src="@drawable/today_delivery_request" />
+
+                    </RelativeLayout>
+
+
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:layout_marginTop="25dp"
+                                android:background="@drawable/box"
+                                android:orientation="vertical"
+                                android:padding="5dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="15dp"
+                                    android:lines="1"
+                                    android:text="Today Delivery Done "
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+
+                                <TextView
+                                    android:id="@+id/today_delivery_done"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="5dp"
+                                    android:drawablePadding="5sp"
+                                    android:gravity="center"
+                                    android:text="-"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="42dp"
+                            android:layout_height="42dp"
+                            android:layout_marginLeft="15dp"
+                            android:src="@drawable/today_delivery_done" />
+
+                    </RelativeLayout>
+
+
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="2">
+
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:layout_marginTop="25dp"
+                                android:background="@drawable/box"
+                                android:orientation="vertical"
+                                android:padding="5dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="15dp"
+                                    android:lines="1"
+                                    android:text="Today Delivery Pending"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/today_delivery_pending"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="5dp"
+                                    android:drawablePadding="5sp"
+                                    android:gravity="center"
+                                    android:text="-"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="42dp"
+                            android:layout_height="42dp"
+                            android:layout_marginLeft="15dp"
+                            android:src="@drawable/today_delivery_pending" />
+
+                    </RelativeLayout>
+
+
+
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:layout_marginTop="25dp"
+                                android:background="@drawable/box"
+                                android:orientation="vertical"
+                                android:padding="5dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="15dp"
+                                    android:lines="1"
+                                    android:text="Today Delivery Cancle"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+
+                                <TextView
+                                    android:id="@+id/today_delivery_cancle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="5dp"
+                                    android:drawablePadding="5sp"
+                                    android:gravity="center"
+                                    android:text="-"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="42dp"
+                            android:layout_height="42dp"
+                            android:layout_marginLeft="15dp"
+                            android:src="@drawable/today_delivery_cancle" />
+
+                    </RelativeLayout>
+
+
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="2">
+
+
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:layout_marginTop="25dp"
+                                android:background="@drawable/box"
+                                android:orientation="vertical"
+                                android:padding="5dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="15dp"
+                                    android:lines="1"
+                                    android:text="Total Pickup Parcel"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+
+                                <TextView
+                                    android:id="@+id/total_pickup_parcel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="5dp"
+                                    android:drawablePadding="5sp"
+                                    android:gravity="center"
+                                    android:text="-"
+                                    android:textColor="@color/black"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="42dp"
+                            android:layout_height="42dp"
+                            android:layout_marginLeft="15dp"
+                            android:src="@drawable/total_pickup_parcel" />
+
+                    </RelativeLayout>
+
+
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:layout_marginTop="25dp"
+                                android:background="@drawable/box"
+                                android:orientation="vertical"
+                                android:padding="5dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="15dp"
+                                    android:lines="1"
+                                    android:text="Total Delivery Parcel"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+
+                                <TextView
+                                    android:id="@+id/total_delivery_parcel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="5dp"
+                                    android:drawablePadding="5sp"
+                                    android:gravity="center"
+                                    android:text="-"
+                                    android:textColor="@color/black"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="42dp"
+                            android:layout_height="42dp"
+                            android:layout_marginLeft="15dp"
+                            android:src="@drawable/total_delivery_parcel" />
+
+                    </RelativeLayout>
+
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="100dp"
+                                    android:layout_marginTop="25dp"
+                                    android:background="@drawable/box"
+                                    android:orientation="vertical"
+                                    android:padding="5dp">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="15dp"
+                                        android:lines="1"
+                                        android:text="Balance Amount"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/black"
+                                        android:textSize="15sp"
+
+                                        android:textStyle="bold" />
+
+
+                                    <TextView
+                                        android:id="@+id/balance_amount"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginTop="5dp"
+                                        android:drawablePadding="5sp"
+                                        android:text="-"
+                                        android:textColor="@color/black"
+                                        android:textSize="18sp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="42dp"
+                                android:layout_height="42dp"
+                                android:layout_centerHorizontal="true"
+                                android:foregroundGravity="center"
+                                android:src="@drawable/balance_ammount" />
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:weightSum="2">
+
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="100dp"
+                                    android:layout_marginTop="25dp"
+                                    android:background="@drawable/box"
+                                    android:orientation="vertical"
+                                    android:padding="5dp">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_marginTop="15dp"
+                                        android:lines="1"
+                                        android:text="Total Collection Amount"
+                                        android:textColor="@color/black"
+                                        android:textSize="15sp"
+                                        android:textStyle="bold" />
+
+
+                                    <TextView
+                                        android:id="@+id/total_collection_amount"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginTop="5dp"
+                                        android:drawablePadding="5sp"
+                                        android:gravity="center"
+                                        android:text="-"
+                                        android:textColor="@color/black"
+                                        android:textSize="18sp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="42dp"
+                                android:layout_height="42dp"
+                                android:layout_marginLeft="15dp"
+                                android:src="@drawable/total_collection" />
+
+                        </RelativeLayout>
+
+
+
+
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="100dp"
+                                    android:layout_marginTop="25dp"
+                                    android:background="@drawable/box"
+                                    android:orientation="vertical"
+                                    android:padding="5dp">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_marginTop="15dp"
+                                        android:lines="1"
+                                        android:text="Total Paid Branch"
+                                        android:textColor="@color/black"
+                                        android:textSize="15sp"
+                                        android:textStyle="bold" />
+
+
+                                    <TextView
+                                        android:id="@+id/total_paid_branch"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginTop="5dp"
+                                        android:drawablePadding="5sp"
+                                        android:gravity="center"
+                                        android:text="-"
+                                        android:textColor="@color/black"
+                                        android:textSize="18sp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="42dp"
+                                android:layout_height="42dp"
+                                android:layout_marginLeft="15dp"
+                                android:src="@drawable/total_paid_branch" />
+
+                        </RelativeLayout>
+
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</LinearLayout>
+
+
+
+
+
+
+
+
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:background="@color/colorC"-->
+<!--    android:orientation="vertical">-->
+
+<!--    <include-->
+<!--        android:id="@+id/toolbar"-->
+<!--        layout="@layout/layout_toolbar" />-->
+
+<!--    <androidx.core.widget.NestedScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:fillViewport="true"-->
+<!--        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">-->
+
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--            android:id="@+id/cl_root"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
+
+<!--            <RelativeLayout-->
+<!--                android:id="@+id/rl_user_info"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="@dimen/five"-->
+<!--                android:background="@color/white"-->
+<!--                android:padding="@dimen/five"-->
+<!--                app:layout_constraintTop_toTopOf="parent">-->
+
+<!--                <de.hdodenhof.circleimageview.CircleImageView-->
+<!--                    android:id="@+id/iv_user_image"-->
+<!--                    android:layout_width="50sp"-->
+<!--                    android:layout_height="50sp"-->
+<!--                    android:src="@drawable/img_avatar" />-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginLeft="@dimen/ten"-->
+<!--                    android:layout_toRightOf="@+id/iv_user_image"-->
+<!--                    android:orientation="vertical">-->
+
+<!--                    <androidx.appcompat.widget.AppCompatTextView-->
+<!--                        android:id="@+id/tv_user_name"-->
+<!--                        style="@style/RobotoMedium"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:hint="@string/merchant_name"-->
+<!--                        android:padding="@dimen/five"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textSize="@dimen/text_size_h5" />-->
+
+<!--                    <androidx.appcompat.widget.AppCompatTextView-->
+<!--                        android:id="@+id/tv_phone"-->
+<!--                        style="@style/RobotoRegular"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:hint="@string/phone"-->
+<!--                        android:padding="@dimen/five"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textSize="@dimen/text_size_h6" />-->
+
+<!--                </LinearLayout>-->
+
+<!--            </RelativeLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/old"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/rl_user_info">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:weightSum="2">-->
+
+<!--                    <RelativeLayout-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight="1">-->
+
+<!--                        <androidx.cardview.widget.CardView-->
+
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="120dp"-->
+<!--                            android:layout_gravity="center_horizontal"-->
+<!--                            android:layout_marginStart="@dimen/five"-->
+<!--                            android:layout_marginTop="@dimen/five"-->
+<!--                            android:layout_marginEnd="@dimen/five"-->
+<!--                            android:layout_marginBottom="@dimen/five"-->
+<!--                            app:cardBackgroundColor="@color/orange"-->
+<!--                            app:cardCornerRadius="@dimen/eight">-->
+
+<!--                            <RelativeLayout-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_gravity="center_horizontal"-->
+<!--                                android:gravity="center_horizontal"-->
+<!--                                android:orientation="vertical"-->
+<!--                                android:padding="@dimen/five">-->
+
+
+<!--                                <androidx.appcompat.widget.AppCompatTextView-->
+<!--                                    android:id="@+id/today_pickup_parcel"-->
+<!--                                    style="@style/RobotoBold"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_centerHorizontal="true"-->
+<!--                                    android:gravity="center"-->
+<!--                                    android:padding="@dimen/five"-->
+<!--                                    android:text="150"-->
+<!--                                    android:textColor="@color/white"-->
+<!--                                    android:textSize="@dimen/text_size_h3" />-->
+
+<!--                                <androidx.appcompat.widget.AppCompatTextView-->
+
+<!--                                    style="@style/PlayFairBold"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_alignParentEnd="true"-->
+<!--                                    android:layout_alignParentRight="true"-->
+<!--                                    android:layout_alignParentBottom="true"-->
+<!--                                    android:layout_centerHorizontal="true"-->
+<!--                                    android:gravity="center"-->
+<!--                                    android:padding="@dimen/five"-->
+<!--                                    android:text="Today Pickup Request"-->
+<!--                                    android:textColor="@color/white"-->
+<!--                                    android:textSize="@dimen/text_size_h5" />-->
+
+<!--                            </RelativeLayout>-->
+
+
+<!--                        </androidx.cardview.widget.CardView>-->
+
+
+<!--                    </RelativeLayout>-->
+
+<!--                    <RelativeLayout-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight="1">-->
+
+<!--                        <androidx.cardview.widget.CardView-->
+
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="120dp"-->
+<!--                            android:layout_gravity="center_horizontal"-->
+<!--                            android:layout_marginStart="@dimen/five"-->
+<!--                            android:layout_marginTop="@dimen/five"-->
+<!--                            android:layout_marginEnd="@dimen/five"-->
+<!--                            android:layout_marginBottom="@dimen/five"-->
+<!--                            app:cardBackgroundColor="@color/orange"-->
+<!--                            app:cardCornerRadius="@dimen/eight">-->
+
+<!--                            <RelativeLayout-->
+
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_gravity="center_horizontal"-->
+<!--                                android:gravity="center_horizontal"-->
+<!--                                android:orientation="vertical"-->
+<!--                                android:padding="@dimen/five">-->
+
+
+<!--                                <androidx.appcompat.widget.AppCompatTextView-->
+<!--                                    android:id="@+id/today_pickup_done"-->
+<!--                                    style="@style/RobotoBold"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_centerHorizontal="true"-->
+<!--                                    android:gravity="center"-->
+<!--                                    android:padding="@dimen/five"-->
+<!--                                    android:text="150"-->
+<!--                                    android:textColor="@color/white"-->
+<!--                                    android:textSize="@dimen/text_size_h3" />-->
+
+<!--                                <androidx.appcompat.widget.AppCompatTextView-->
+<!--                                    style="@style/PlayFairBold"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_alignParentEnd="true"-->
+<!--                                    android:layout_alignParentRight="true"-->
+<!--                                    android:layout_alignParentBottom="true"-->
+<!--                                    android:layout_centerHorizontal="true"-->
+<!--                                    android:gravity="center"-->
+<!--                                    android:padding="@dimen/five"-->
+<!--                                    android:text="Today Pickup Done"-->
+<!--                                    android:textColor="@color/white"-->
+<!--                                    android:textSize="@dimen/text_size_h5" />-->
+
+<!--                            </RelativeLayout>-->
+
+
+<!--                        </androidx.cardview.widget.CardView>-->
+
+<!--                    </RelativeLayout>-->
+
+
+<!--                </LinearLayout>-->
+
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:weightSum="2">-->
+
+<!--                    <RelativeLayout-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight="1">-->
+
+<!--                        <androidx.cardview.widget.CardView-->
+
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="120dp"-->
+<!--                            android:layout_gravity="center_horizontal"-->
+<!--                            android:layout_marginStart="@dimen/five"-->
+<!--                            android:layout_marginTop="@dimen/five"-->
+<!--                            android:layout_marginEnd="@dimen/five"-->
+<!--                            android:layout_marginBottom="@dimen/five"-->
+<!--                            app:cardBackgroundColor="@color/orange"-->
+<!--                            app:cardCornerRadius="@dimen/eight">-->
+
+<!--                            <RelativeLayout-->
+
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_gravity="center_horizontal"-->
+<!--                                android:gravity="center_horizontal"-->
+<!--                                android:orientation="vertical"-->
+<!--                                android:padding="@dimen/five">-->
+
+
+<!--                                <androidx.appcompat.widget.AppCompatTextView-->
+<!--                                    android:id="@+id/today_delivery_parcel"-->
+<!--                                    style="@style/RobotoBold"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_centerHorizontal="true"-->
+<!--                                    android:gravity="center"-->
+<!--                                    android:padding="@dimen/five"-->
+<!--                                    android:text="150"-->
+<!--                                    android:textColor="@color/white"-->
+<!--                                    android:textSize="@dimen/text_size_h3" />-->
+
+<!--                                <androidx.appcompat.widget.AppCompatTextView-->
+<!--                                    style="@style/PlayFairBold"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_alignParentEnd="true"-->
+<!--                                    android:layout_alignParentRight="true"-->
+<!--                                    android:layout_alignParentBottom="true"-->
+<!--                                    android:layout_centerHorizontal="true"-->
+<!--                                    android:gravity="center"-->
+<!--                                    android:padding="@dimen/five"-->
+<!--                                    android:text="Today Delivery Request"-->
+<!--                                    android:textColor="@color/white"-->
+<!--                                    android:textSize="@dimen/text_size_h5" />-->
+
+<!--                            </RelativeLayout>-->
+
+
+<!--                        </androidx.cardview.widget.CardView>-->
+
+
+<!--                    </RelativeLayout>-->
+
+<!--                    <RelativeLayout-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight="1">-->
+
+<!--                        <androidx.cardview.widget.CardView-->
+
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="120dp"-->
+<!--                            android:layout_gravity="center_horizontal"-->
+<!--                            android:layout_marginStart="@dimen/five"-->
+<!--                            android:layout_marginTop="@dimen/five"-->
+<!--                            android:layout_marginEnd="@dimen/five"-->
+<!--                            android:layout_marginBottom="@dimen/five"-->
+<!--                            app:cardBackgroundColor="@color/orange"-->
+<!--                            app:cardCornerRadius="@dimen/eight">-->
+
+<!--                            <RelativeLayout-->
+
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_gravity="center_horizontal"-->
+<!--                                android:gravity="center_horizontal"-->
+<!--                                android:orientation="vertical"-->
+<!--                                android:padding="@dimen/five">-->
+
+
+<!--                                <androidx.appcompat.widget.AppCompatTextView-->
+<!--                                    android:id="@+id/today_delivery_done"-->
+<!--                                    style="@style/RobotoBold"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_centerHorizontal="true"-->
+<!--                                    android:gravity="center"-->
+<!--                                    android:padding="@dimen/five"-->
+<!--                                    android:text="150"-->
+<!--                                    android:textColor="@color/white"-->
+<!--                                    android:textSize="@dimen/text_size_h3" />-->
+
+<!--                                <androidx.appcompat.widget.AppCompatTextView-->
+<!--                                    style="@style/PlayFairBold"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_alignParentEnd="true"-->
+<!--                                    android:layout_alignParentRight="true"-->
+<!--                                    android:layout_alignParentBottom="true"-->
+<!--                                    android:layout_centerHorizontal="true"-->
+<!--                                    android:gravity="center"-->
+<!--                                    android:padding="@dimen/five"-->
+<!--                                    android:text="Today Delivery Done"-->
+<!--                                    android:textColor="@color/white"-->
+<!--                                    android:textSize="@dimen/text_size_h5" />-->
+
+<!--                            </RelativeLayout>-->
+
+
+<!--                        </androidx.cardview.widget.CardView>-->
+
+<!--                    </RelativeLayout>-->
+
+
+<!--                </LinearLayout>-->
+
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:weightSum="2">-->
+
+<!--                    <RelativeLayout-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight="1">-->
+
+<!--                        <androidx.cardview.widget.CardView-->
+
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="120dp"-->
+<!--                            android:layout_gravity="center_horizontal"-->
+<!--                            android:layout_marginStart="@dimen/five"-->
+<!--                            android:layout_marginTop="@dimen/five"-->
+<!--                            android:layout_marginEnd="@dimen/five"-->
+<!--                            android:layout_marginBottom="@dimen/five"-->
+<!--                            app:cardBackgroundColor="@color/orange"-->
+<!--                            app:cardCornerRadius="@dimen/eight">-->
+
+<!--                            <RelativeLayout-->
+
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_gravity="center_horizontal"-->
+<!--                                android:gravity="center_horizontal"-->
+<!--                                android:orientation="vertical"-->
+<!--                                android:padding="@dimen/five">-->
+
+
+<!--                                <androidx.appcompat.widget.AppCompatTextView-->
+<!--                                    android:id="@+id/today_delivery_pending"-->
+<!--                                    style="@style/RobotoBold"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_centerHorizontal="true"-->
+<!--                                    android:gravity="center"-->
+<!--                                    android:padding="@dimen/five"-->
+<!--                                    android:text="150"-->
+<!--                                    android:textColor="@color/white"-->
+<!--                                    android:textSize="@dimen/text_size_h3" />-->
+
+<!--                                <androidx.appcompat.widget.AppCompatTextView-->
+<!--                                    style="@style/PlayFairBold"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_alignParentEnd="true"-->
+<!--                                    android:layout_alignParentRight="true"-->
+<!--                                    android:layout_alignParentBottom="true"-->
+<!--                                    android:layout_centerHorizontal="true"-->
+<!--                                    android:gravity="center"-->
+<!--                                    android:padding="@dimen/five"-->
+<!--                                    android:text="Todey Delivery Pending"-->
+<!--                                    android:textColor="@color/white"-->
+<!--                                    android:textSize="@dimen/text_size_h5" />-->
+
+<!--                            </RelativeLayout>-->
+
+
+<!--                        </androidx.cardview.widget.CardView>-->
+
+
+<!--                    </RelativeLayout>-->
+
+<!--                    <RelativeLayout-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight="1">-->
+
+<!--                        <androidx.cardview.widget.CardView-->
+
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="120dp"-->
+<!--                            android:layout_gravity="center_horizontal"-->
+<!--                            android:layout_marginStart="@dimen/five"-->
+<!--                            android:layout_marginTop="@dimen/five"-->
+<!--                            android:layout_marginEnd="@dimen/five"-->
+<!--                            android:layout_marginBottom="@dimen/five"-->
+<!--                            app:cardBackgroundColor="@color/orange"-->
+<!--                            app:cardCornerRadius="@dimen/eight">-->
+
+<!--                            <RelativeLayout-->
+
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_gravity="center_horizontal"-->
+<!--                                android:gravity="center_horizontal"-->
+<!--                                android:orientation="vertical"-->
+<!--                                android:padding="@dimen/five">-->
+
+
+<!--                                <androidx.appcompat.widget.AppCompatTextView-->
+<!--                                    android:id="@+id/today_delivery_cancle"-->
+<!--                                    style="@style/RobotoBold"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_centerHorizontal="true"-->
+<!--                                    android:gravity="center"-->
+<!--                                    android:padding="@dimen/five"-->
+<!--                                    android:text="150"-->
+<!--                                    android:textColor="@color/white"-->
+<!--                                    android:textSize="@dimen/text_size_h3" />-->
+
+<!--                                <androidx.appcompat.widget.AppCompatTextView-->
+<!--                                    style="@style/PlayFairBold"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_alignParentEnd="true"-->
+<!--                                    android:layout_alignParentRight="true"-->
+<!--                                    android:layout_alignParentBottom="true"-->
+<!--                                    android:layout_centerHorizontal="true"-->
+<!--                                    android:gravity="center"-->
+<!--                                    android:padding="@dimen/five"-->
+<!--                                    android:text="Today Delivery Cancel"-->
+<!--                                    android:textColor="@color/white"-->
+<!--                                    android:textSize="@dimen/text_size_h5" />-->
+
+<!--                            </RelativeLayout>-->
+
+
+<!--                        </androidx.cardview.widget.CardView>-->
+
+<!--                    </RelativeLayout>-->
+
+
+<!--                </LinearLayout>-->
+
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:weightSum="2">-->
+
+<!--                    <RelativeLayout-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight="1">-->
+
+<!--                        <androidx.cardview.widget.CardView-->
+
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="120dp"-->
+<!--                            android:layout_gravity="center_horizontal"-->
+<!--                            android:layout_marginStart="@dimen/five"-->
+<!--                            android:layout_marginTop="@dimen/five"-->
+<!--                            android:layout_marginEnd="@dimen/five"-->
+<!--                            android:layout_marginBottom="@dimen/five"-->
+<!--                            app:cardBackgroundColor="@color/orange"-->
+<!--                            app:cardCornerRadius="@dimen/eight">-->
+
+<!--                            <RelativeLayout-->
+
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_gravity="center_horizontal"-->
+<!--                                android:gravity="center_horizontal"-->
+<!--                                android:orientation="vertical"-->
+<!--                                android:padding="@dimen/five">-->
+
+
+<!--                                <androidx.appcompat.widget.AppCompatTextView-->
+<!--                                    android:id="@+id/total_pickup_parcel"-->
+<!--                                    style="@style/RobotoBold"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_centerHorizontal="true"-->
+<!--                                    android:gravity="center"-->
+<!--                                    android:padding="@dimen/five"-->
+<!--                                    android:text="150"-->
+<!--                                    android:textColor="@color/white"-->
+<!--                                    android:textSize="@dimen/text_size_h3" />-->
+
+<!--                                <androidx.appcompat.widget.AppCompatTextView-->
+<!--                                    style="@style/PlayFairBold"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_alignParentEnd="true"-->
+<!--                                    android:layout_alignParentRight="true"-->
+<!--                                    android:layout_alignParentBottom="true"-->
+<!--                                    android:layout_centerHorizontal="true"-->
+<!--                                    android:gravity="center"-->
+<!--                                    android:padding="@dimen/five"-->
+<!--                                    android:text="Total Pickup Parcel"-->
+<!--                                    android:textColor="@color/white"-->
+<!--                                    android:textSize="@dimen/text_size_h5" />-->
+
+<!--                            </RelativeLayout>-->
+
+
+<!--                        </androidx.cardview.widget.CardView>-->
+
+
+<!--                    </RelativeLayout>-->
+
+<!--                    <RelativeLayout-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight="1">-->
+
+<!--                        <androidx.cardview.widget.CardView-->
+
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="120dp"-->
+<!--                            android:layout_gravity="center_horizontal"-->
+<!--                            android:layout_marginStart="@dimen/five"-->
+<!--                            android:layout_marginTop="@dimen/five"-->
+<!--                            android:layout_marginEnd="@dimen/five"-->
+<!--                            android:layout_marginBottom="@dimen/five"-->
+<!--                            app:cardBackgroundColor="@color/orange"-->
+<!--                            app:cardCornerRadius="@dimen/eight">-->
+
+<!--                            <RelativeLayout-->
+
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_gravity="center_horizontal"-->
+<!--                                android:gravity="center_horizontal"-->
+<!--                                android:orientation="vertical"-->
+<!--                                android:padding="@dimen/five">-->
+
+
+<!--                                <androidx.appcompat.widget.AppCompatTextView-->
+<!--                                    android:id="@+id/total_delivery_parcel"-->
+<!--                                    style="@style/RobotoBold"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_centerHorizontal="true"-->
+<!--                                    android:gravity="center"-->
+<!--                                    android:padding="@dimen/five"-->
+<!--                                    android:text="150"-->
+<!--                                    android:textColor="@color/white"-->
+<!--                                    android:textSize="@dimen/text_size_h3" />-->
+
+<!--                                <androidx.appcompat.widget.AppCompatTextView-->
+
+<!--                                    style="@style/PlayFairBold"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_alignParentEnd="true"-->
+<!--                                    android:layout_alignParentRight="true"-->
+<!--                                    android:layout_alignParentBottom="true"-->
+<!--                                    android:layout_centerHorizontal="true"-->
+<!--                                    android:gravity="center"-->
+<!--                                    android:padding="@dimen/five"-->
+<!--                                    android:text="Total Delivery Parcel"-->
+<!--                                    android:textColor="@color/white"-->
+<!--                                    android:textSize="@dimen/text_size_h5" />-->
+
+<!--                            </RelativeLayout>-->
+
+
+<!--                        </androidx.cardview.widget.CardView>-->
+
+<!--                    </RelativeLayout>-->
+
+
+<!--                </LinearLayout>-->
+
+
+<!--&lt;!&ndash;                <LinearLayout&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:orientation="horizontal"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:weightSum="2">&ndash;&gt;-->
+
+<!--&lt;!&ndash;                    <RelativeLayout&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:layout_width="0dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:layout_weight="1">&ndash;&gt;-->
+
+<!--&lt;!&ndash;                        <androidx.cardview.widget.CardView&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:id="@+id/cv_root"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:layout_height="120dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:layout_gravity="center_horizontal"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:layout_marginStart="@dimen/five"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:layout_marginTop="@dimen/five"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:layout_marginEnd="@dimen/five"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:layout_marginBottom="@dimen/five"&ndash;&gt;-->
+<!--&lt;!&ndash;                            app:cardBackgroundColor="@color/colorE"&ndash;&gt;-->
+<!--&lt;!&ndash;                            app:cardCornerRadius="@dimen/eight">&ndash;&gt;-->
+
+<!--&lt;!&ndash;                            <RelativeLayout&ndash;&gt;-->
+<!--&lt;!&ndash;                                android:id="@+id/parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                                android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                                android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                                android:layout_gravity="center_horizontal"&ndash;&gt;-->
+<!--&lt;!&ndash;                                android:gravity="center_horizontal"&ndash;&gt;-->
+<!--&lt;!&ndash;                                android:orientation="vertical"&ndash;&gt;-->
+<!--&lt;!&ndash;                                android:padding="@dimen/five">&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;                                <androidx.appcompat.widget.AppCompatTextView&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:id="@+id/tv_counter"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    style="@style/RobotoBold"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:layout_centerHorizontal="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:gravity="center"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:padding="@dimen/five"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:text="150"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:textColor="@color/white"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:textSize="@dimen/text_size_h3" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;                                <androidx.appcompat.widget.AppCompatTextView&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:id="@+id/tv_title"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    style="@style/PlayFairBold"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:layout_alignParentEnd="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:layout_alignParentRight="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:layout_alignParentBottom="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:layout_centerHorizontal="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:gravity="center"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:padding="@dimen/five"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:text="@string/new_orders"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:textColor="@color/white"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:textSize="@dimen/text_size_h5" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;                            </RelativeLayout>&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;                        </androidx.cardview.widget.CardView>&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;                    </RelativeLayout>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                    <RelativeLayout&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:layout_width="0dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:layout_weight="1">&ndash;&gt;-->
+
+<!--&lt;!&ndash;                        <androidx.cardview.widget.CardView&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:id="@+id/cv_root"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:layout_height="120dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:layout_gravity="center_horizontal"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:layout_marginStart="@dimen/five"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:layout_marginTop="@dimen/five"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:layout_marginEnd="@dimen/five"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:layout_marginBottom="@dimen/five"&ndash;&gt;-->
+<!--&lt;!&ndash;                            app:cardBackgroundColor="@color/colorE"&ndash;&gt;-->
+<!--&lt;!&ndash;                            app:cardCornerRadius="@dimen/eight">&ndash;&gt;-->
+
+<!--&lt;!&ndash;                            <RelativeLayout&ndash;&gt;-->
+<!--&lt;!&ndash;                                android:id="@+id/parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                                android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                                android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                                android:layout_gravity="center_horizontal"&ndash;&gt;-->
+<!--&lt;!&ndash;                                android:gravity="center_horizontal"&ndash;&gt;-->
+<!--&lt;!&ndash;                                android:orientation="vertical"&ndash;&gt;-->
+<!--&lt;!&ndash;                                android:padding="@dimen/five">&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;                                <androidx.appcompat.widget.AppCompatTextView&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:id="@+id/tv_counter"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    style="@style/RobotoBold"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:layout_centerHorizontal="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:gravity="center"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:padding="@dimen/five"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:text="150"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:textColor="@color/white"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:textSize="@dimen/text_size_h3" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;                                <androidx.appcompat.widget.AppCompatTextView&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:id="@+id/tv_title"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    style="@style/PlayFairBold"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:layout_alignParentEnd="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:layout_alignParentRight="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:layout_alignParentBottom="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:layout_centerHorizontal="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:gravity="center"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:padding="@dimen/five"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:text="@string/new_orders"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:textColor="@color/white"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:textSize="@dimen/text_size_h5" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;                            </RelativeLayout>&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;                        </androidx.cardview.widget.CardView>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                    </RelativeLayout>&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;                </LinearLayout>&ndash;&gt;-->
+
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="vertical">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content">-->
+
+<!--                        <androidx.cardview.widget.CardView-->
+
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="120dp"-->
+<!--                            android:layout_gravity="center_horizontal"-->
+<!--                            android:layout_marginStart="@dimen/five"-->
+<!--                            android:layout_marginTop="@dimen/five"-->
+<!--                            android:layout_marginEnd="@dimen/five"-->
+<!--                            android:layout_marginBottom="@dimen/five"-->
+<!--                            app:cardBackgroundColor="@color/orange"-->
+<!--                            app:cardCornerRadius="@dimen/eight">-->
+
+<!--                            <RelativeLayout-->
+
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_gravity="center_horizontal"-->
+<!--                                android:gravity="center_horizontal"-->
+<!--                                android:orientation="vertical"-->
+<!--                                android:padding="@dimen/five">-->
+
+
+<!--                                <androidx.appcompat.widget.AppCompatTextView-->
+<!--                                    android:id="@+id/balance_amount"-->
+<!--                                    style="@style/RobotoBold"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_centerHorizontal="true"-->
+<!--                                    android:gravity="center"-->
+<!--                                    android:padding="@dimen/five"-->
+<!--                                    android:text="150"-->
+<!--                                    android:textColor="@color/white"-->
+<!--                                    android:textSize="@dimen/text_size_h3" />-->
+
+<!--                                <androidx.appcompat.widget.AppCompatTextView-->
+<!--                                    style="@style/PlayFairBold"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_alignParentEnd="true"-->
+<!--                                    android:layout_alignParentRight="true"-->
+<!--                                    android:layout_alignParentBottom="true"-->
+<!--                                    android:layout_centerHorizontal="true"-->
+<!--                                    android:gravity="center"-->
+<!--                                    android:padding="@dimen/five"-->
+<!--                                    android:text="Balance Amount"-->
+<!--                                    android:textColor="@color/white"-->
+<!--                                    android:textSize="@dimen/text_size_h5" />-->
+
+<!--                            </RelativeLayout>-->
+
+<!--                        </androidx.cardview.widget.CardView>-->
+
+
+<!--                    </LinearLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="horizontal"-->
+<!--                        android:weightSum="2">-->
+
+<!--                        <RelativeLayout-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_weight="1">-->
+
+<!--                            <androidx.cardview.widget.CardView-->
+
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="120dp"-->
+<!--                                android:layout_gravity="center_horizontal"-->
+<!--                                android:layout_marginStart="@dimen/five"-->
+<!--                                android:layout_marginTop="@dimen/five"-->
+<!--                                android:layout_marginEnd="@dimen/five"-->
+<!--                                android:layout_marginBottom="@dimen/five"-->
+<!--                                app:cardBackgroundColor="@color/orange"-->
+<!--                                app:cardCornerRadius="@dimen/eight">-->
+
+<!--                                <RelativeLayout-->
+
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_gravity="center_horizontal"-->
+<!--                                    android:gravity="center_horizontal"-->
+<!--                                    android:orientation="vertical"-->
+<!--                                    android:padding="@dimen/five">-->
+
+
+<!--                                    <androidx.appcompat.widget.AppCompatTextView-->
+<!--                                        android:id="@+id/total_collection_amount"-->
+<!--                                        style="@style/RobotoBold"-->
+<!--                                        android:layout_width="wrap_content"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        android:layout_centerHorizontal="true"-->
+<!--                                        android:gravity="center"-->
+<!--                                        android:padding="@dimen/five"-->
+<!--                                        android:text="150"-->
+<!--                                        android:textColor="@color/white"-->
+<!--                                        android:textSize="@dimen/text_size_h3" />-->
+
+<!--                                    <androidx.appcompat.widget.AppCompatTextView-->
+<!--                                        style="@style/PlayFairBold"-->
+<!--                                        android:layout_width="wrap_content"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        android:layout_alignParentEnd="true"-->
+<!--                                        android:layout_alignParentRight="true"-->
+<!--                                        android:layout_alignParentBottom="true"-->
+<!--                                        android:layout_centerHorizontal="true"-->
+<!--                                        android:gravity="center"-->
+<!--                                        android:padding="@dimen/five"-->
+<!--                                        android:text="Total Collection Amount"-->
+<!--                                        android:textColor="@color/white"-->
+<!--                                        android:textSize="@dimen/text_size_h5" />-->
+
+<!--                                </RelativeLayout>-->
+
+
+<!--                            </androidx.cardview.widget.CardView>-->
+
+
+<!--                        </RelativeLayout>-->
+
+<!--                        <RelativeLayout-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_weight="1">-->
+
+<!--                            <androidx.cardview.widget.CardView-->
+<!--                                android:id="@+id/cv_root"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="120dp"-->
+<!--                                android:layout_gravity="center_horizontal"-->
+<!--                                android:layout_marginStart="@dimen/five"-->
+<!--                                android:layout_marginTop="@dimen/five"-->
+<!--                                android:layout_marginEnd="@dimen/five"-->
+<!--                                android:layout_marginBottom="@dimen/five"-->
+<!--                                app:cardBackgroundColor="@color/orange"-->
+<!--                                app:cardCornerRadius="@dimen/eight">-->
+
+<!--                                <RelativeLayout-->
+<!--                                    android:id="@+id/parent"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_gravity="center_horizontal"-->
+<!--                                    android:gravity="center_horizontal"-->
+<!--                                    android:orientation="vertical"-->
+<!--                                    android:padding="@dimen/five">-->
+
+
+<!--                                    <androidx.appcompat.widget.AppCompatTextView-->
+<!--                                        android:id="@+id/total_paid_branch"-->
+<!--                                        style="@style/RobotoBold"-->
+<!--                                        android:layout_width="wrap_content"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        android:layout_centerHorizontal="true"-->
+<!--                                        android:gravity="center"-->
+<!--                                        android:padding="@dimen/five"-->
+<!--                                        android:text="150"-->
+<!--                                        android:textColor="@color/white"-->
+<!--                                        android:textSize="@dimen/text_size_h3" />-->
+
+<!--                                    <androidx.appcompat.widget.AppCompatTextView-->
+<!--                                        android:id="@+id/tv_title"-->
+<!--                                        style="@style/PlayFairBold"-->
+<!--                                        android:layout_width="wrap_content"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        android:layout_alignParentEnd="true"-->
+<!--                                        android:layout_alignParentRight="true"-->
+<!--                                        android:layout_alignParentBottom="true"-->
+<!--                                        android:layout_centerHorizontal="true"-->
+<!--                                        android:gravity="center"-->
+<!--                                        android:padding="@dimen/five"-->
+<!--                                        android:text="Total Paid To Branch"-->
+<!--                                        android:textColor="@color/white"-->
+<!--                                        android:textSize="@dimen/text_size_h5" />-->
+
+<!--                                </RelativeLayout>-->
+
+
+<!--                            </androidx.cardview.widget.CardView>-->
+
+<!--                        </RelativeLayout>-->
+
+
+<!--                    </LinearLayout>-->
+
+
+<!--                </LinearLayout>-->
+
+<!--            </LinearLayout>-->
+
+
+<!--            &lt;!&ndash;            <androidx.recyclerview.widget.RecyclerView&ndash;&gt;-->
+<!--            &lt;!&ndash;                android:id="@+id/rv_list"&ndash;&gt;-->
+<!--            &lt;!&ndash;                android:layout_width="match_parent"&ndash;&gt;-->
+<!--            &lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+<!--            &lt;!&ndash;                android:layout_marginTop="@dimen/ten"&ndash;&gt;-->
+<!--            &lt;!&ndash;                android:layout_marginBottom="@dimen/ten"&ndash;&gt;-->
+<!--            &lt;!&ndash;                app:layout_constraintTop_toBottomOf="@+id/old"&ndash;&gt;-->
+<!--            &lt;!&ndash;                tools:itemCount="2"&ndash;&gt;-->
+<!--            &lt;!&ndash;                tools:listitem="@layout/model_dashboard" />&ndash;&gt;-->
+
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--    </androidx.core.widget.NestedScrollView>-->
+
+<!--</LinearLayout>-->
+

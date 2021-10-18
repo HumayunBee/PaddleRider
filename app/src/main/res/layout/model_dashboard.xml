@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cv_root"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginStart="@dimen/five"
+    android:layout_marginTop="@dimen/five"
+    android:layout_marginEnd="@dimen/five"
+    android:layout_marginBottom="@dimen/five"
+    app:cardBackgroundColor="@color/colorE"
+    app:cardCornerRadius="@dimen/eight">
+
+    <RelativeLayout
+        android:id="@+id/parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/five">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_counter"
+            style="@style/RobotoBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:padding="@dimen/five"
+            android:text="150"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_h3" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title"
+            style="@style/PlayFairBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:padding="@dimen/five"
+            android:text="@string/new_orders"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_h5" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

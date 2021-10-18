@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Rider</string>
+
+<!--    hint / placeholder / title-->
+
+    <string name="email">Enter email</string>
+    <string name="phone">Phone number</string>
+    <string name="from_date">From Date</string>
+    <string name="to_date">To Date</string>
+    <string name="filter">Filter</string>
+    <string name="invoice_no">Invoice no</string>
+    <string name="order_no">Merchant order no</string>
+    <string name="merchant_name">Merchant name</string>
+    <string name="password">Enter password</string>
+    <string name="login">Login</string>
+    <string name="confirm">Confirm</string>
+    <string name="logout">Log out</string>
+    <string name="select">Select</string>
+    <string name="forgot_password">Forgot password</string>
+    <string name="new_orders">New Orders</string>
+    <string name="taka">৳</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="terms_and_conditions">Terms &amp; Conditions</string>
+
+    <string name="track_parcel">Track parcel</string>
+    <string name="hold_parcel">Hold parcel</string>
+    <string name="cancel_parcel">Cancel parcel</string>
+    <string name="delivery_type">Delivery Type</string>
+    <string name="confirm_amount">Confirm Amount</string>
+    <string name="amount">Amount</string>
+    <string name="code">Code</string>
+    <string name="select_date">Select Date</string>
+    <string name="date_format">DD/MM/YYYY</string>
+    <string name="note">Note</string>
+
+    <string name="request_accept">Request accept</string>
+    <string name="request_reject">Request reject</string>
+    <string name="request_reschedule">Request reschedule</string>
+    <string name="request_complete">Request complete</string>
+
+    <string name="pickup_parcel_list">Pickup Parcel List</string>
+    <string name="delivery_parcel_list">Delivery Parcel List</string>
+    <string name="return_parcel_list">Return Parcel List</string>
+    <string name="collection_parcel_list">Collection Parcel List</string>
+    <string name="paid_parcel_list">Paid Parcel List</string>
+
+</resources>

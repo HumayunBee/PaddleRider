@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.stitbd.paddlecourierrider">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/paddlecourier"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/paddlecourier"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BeaconRider"
+        android:usesCleartextTraffic="true">
+        <activity android:name="com.stitbd.paddlecourierrider.Activity.ReturnParcel.ReturnAcceptParcelActivity"></activity>
+        <activity android:name="com.stitbd.paddlecourierrider.Activity.PaidAmount.PaidAmountActivity" />
+        <activity android:name="com.stitbd.paddlecourierrider.Activity.ReturnParcel.RequestReturnActivity" />
+        <activity android:name="com.stitbd.paddlecourierrider.Activity.ReturnParcel.ReturnActivity" />
+        <activity android:name="com.stitbd.paddlecourierrider.Activity.CollectionParcel.CollectionParcelActivity" />
+        <activity android:name="com.stitbd.paddlecourierrider.Activity.DeliveryParcel.AcceptDeliveryActivity" />
+        <activity android:name="com.stitbd.paddlecourierrider.Activity.DeliveryParcel.RequestDeliveryActivity" />
+        <activity android:name="com.stitbd.paddlecourierrider.Activity.DeliveryParcel.DeliveryParcelListActivity" />
+        <activity android:name="com.stitbd.paddlecourierrider.Activity.PickupParcel.AcceptPickActivity" />
+        <activity android:name="com.stitbd.paddlecourierrider.Activity.PickupParcel.RequestPickupActivity" />
+        <activity android:name="com.stitbd.paddlecourierrider.Activity.PickupParcel.PickupParcelActivity" />
+        <activity android:name="com.stitbd.paddlecourierrider.Activity.DashboardActivity" />
+        <activity android:name="com.stitbd.paddlecourierrider.Activity.LoginActivity" />
+        <activity android:name="com.stitbd.paddlecourierrider.Activity.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
